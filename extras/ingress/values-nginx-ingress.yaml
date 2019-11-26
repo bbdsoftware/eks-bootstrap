@@ -1,0 +1,20 @@
+controller:
+  autoscaling:
+    enabled: true
+    minReplicas: 2
+    maxReplicas: 4
+  stats:
+    enabled: true
+  metrics:
+    enabled: true
+    service:
+      annotations:
+        prometheus.io/scrape: "true"
+        prometheus.io/port: "10254"
+    serviceMonitor:
+      enabled: false
+  service:
+    type: NodePort
+    nodePorts:
+      http: 31080
+      https: 31443

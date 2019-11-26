@@ -1,0 +1,6 @@
+clusterName: ql-dev-stage
+awsRegion: eu-west-1
+awsVpcID: "SUPPLY YOUR CLUSTER VPC"
+rbac:
+  create: true
+  serviceAccountName: alb-ingress

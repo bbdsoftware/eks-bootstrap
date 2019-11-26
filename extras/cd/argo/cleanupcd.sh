@@ -1,0 +1,2 @@
+
+helm delete --purge argocd

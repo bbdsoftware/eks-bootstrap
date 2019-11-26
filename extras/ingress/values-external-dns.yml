@@ -1,0 +1,12 @@
+aws:
+  region: "eu-west-1"
+domainFilters: [SUPPLy YOUR DOMINA]
+zoneIdFilters: [SUPPLY YOUR DOMAIN]
+annotationFilter: "kubernetes.io/ingress.class=alb"
+interval: "1m"
+rbac:
+  create: true
+  serviceAccountName: external-dns
+metrics:
+  enabled: true
+  podAnnotations: {prometheus.io/scrape: "true",prometheus.io/port: "7979"}
