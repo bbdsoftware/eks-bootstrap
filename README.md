@@ -5,8 +5,8 @@ Included is an extras section to bootstrap CI and CD components into the cluster
 
 **Background:**
 
-This is part1 of a cluster setup 
-see the bellow repos for nest steps:
+This is Part 1 of a cluster setup 
+see the bellow repos for next steps:
 
 * [Part 1 setting up EKS ](https://github.com/bbdsoftware/eks-bootstrap)
 * [Part 2 setting up CI](https://github.com/bbdsoftware/eks-jenkins-ci)
@@ -38,7 +38,7 @@ This is referenced in all parts as a demo service
 ---
 **NOTE**
 
-Once this is compelted please see  [Part 2 setting up CI](https://github.com/bbdsoftware/eks-jenkins-ci) for setting up ci based on jenkins operator
+Once this is completed please see  [Part 2 setting up CI](https://github.com/bbdsoftware/eks-jenkins-ci) for setting up ci based on jenkins operator
 
 ---
 
