@@ -61,7 +61,7 @@ References :
 ### Ingress
 ---
 
-![Drag Racing](./extras/ingress/ingress.jpg)
+![INgress](./extras/ingress/ingress.jpg)
 
 **`Info`**
 The ingress folder contains a *setupingress.sh* script.The script assumes you have helm installed and configured 
