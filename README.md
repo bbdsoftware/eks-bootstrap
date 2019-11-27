@@ -40,7 +40,7 @@ Once this is compelted please see  [Part 2 setting up CI](https://github.com/bbd
 ---
 
 
-## Creating  EKs clsuter 
+## Creating  EKS cluster 
 The folder *eksctl* contains a reference eks cluster yaml definition  to provision a cluster on aws
 
 Run
@@ -57,6 +57,8 @@ References :
 
 ### Ingress
 ---
+
+![Drag Racing](./extras/ingress/ingress.jpg)
 
 The ingress folder contains a *setupingress.sh* script.  
 The script assumes you have helm installed and configured 
