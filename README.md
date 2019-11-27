@@ -5,7 +5,7 @@ Included is an extras section to bootstrap CI and CD components into the cluster
 
 **Background:**
 
-This is Part 1 of a cluster setup 
+This is **_Part 1_** of a cluster setup 
 see the bellow repos for next steps:
 
 * [Part 1 setting up EKS ](https://github.com/bbdsoftware/eks-bootstrap)
