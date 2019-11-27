@@ -166,3 +166,7 @@ Please see [demo](https://github.com/bbdsoftware/eks-pring-boot-jenkinsop-exampl
 References :
 * https://argoproj.github.io/argo-cd/
 
+# TODO
+* Make this repo in an app of apps pattern to be deployed with argo cd  ref https://argoproj.github.io/argo-cd/operator-manual/cluster-bootstrapping/
+* Include the prometheus operator
+* Include the grafana operator
