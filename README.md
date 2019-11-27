@@ -3,8 +3,44 @@
 This repo contains a reference to provision an eks cluster via eksctl.  
 Included is an extras section to bootstrap CI and CD components into the cluster along with  ingress.
 
+**Background:**
 
-## CREATING A CLUSTER 
+This is part1 of a cluster setup 
+see the bellow repos for nest steps:
+
+* [Part 1 setting up EKS ](https://github.com/bbdsoftware/eks-bootstrap)
+* [Part 2 setting up CI](https://github.com/bbdsoftware/eks-jenkins-ci)
+* [Part 3 setting up CD ](https://github.com/bbdsoftware/eks-argo-cd)
+
+
+**In use:**
+* [helm](https://helm.sh/)
+* [argocd](https://argoproj.github.io/argo-cd/)
+* [Jenkins operator](https://jenkinsci.github.io/kubernetes-operator/)
+* [eksctl fro EKS](https://eksctl.io)
+
+
+
+**Reference articles and videos:**
+* https://www.twistlock.com/2018/08/06/gitops-101-gitops-use/
+* https://www.weave.works/blog/what-is-gitops-really
+* https://jenkins.io/doc/book/pipeline/
+* https://www.youtube.com/watch?v=4owbdHzfyMY
+* https://blog.argoproj.io/introducing-argo-cd-declarative-continuous-delivery-for-kubernetes-da2a73a780cd
+* https://eksctl.io
+* https://docs.aws.amazon.com/eks/latest/userguide/getting-started.html
+
+
+
+---
+**NOTE**
+
+Once this is compelted please see  [Part 2 setting up CI](https://github.com/bbdsoftware/eks-jenkins-ci) for setting up ci based on jenkins operator
+
+---
+
+
+## Creating  EKs clsuter 
 The folder *eksctl* contains a reference eks cluster yaml definition  to provision a cluster on aws
 
 Run
@@ -17,7 +53,7 @@ References :
 * https://eksctl.io/usage/creating-and-managing-clusters/   
 
 
-## EXTRAS
+## Extras
 
 ### Ingress
 ---
