@@ -4,8 +4,6 @@ metadata:
   name: eks-poc
   region: eu-west-1
   version: "1.14"
-iam:
-  serviceRoleARN: arn:aws:iam::883658942312:role/EKS-Execution-role
 cloudWatch:
   clusterLogging:
     enableTypes:
