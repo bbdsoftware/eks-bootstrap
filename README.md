@@ -63,22 +63,18 @@ References :
 
 ![Drag Racing](./extras/ingress/ingress.jpg)
 
-The ingress folder contains a *setupingress.sh* script.  
-The script assumes you have helm installed and configured 
-
+**`Info`**
+The ingress folder contains a *setupingress.sh* script.The script assumes you have helm installed and configured 
 The set up leverages the use of aws alb ingress controller and nginx ingress controller.  
-One alb targeted ingress is created for the nginx-controller. This will effectivelfy create one alb ingress on AWS ingressing all traffic to the nginx-ingress controller. 
-
+One alb targeted ingress is created for the nginx-controller. 
+This will effectively create one alb ingress on AWS ingress all traffic to the nginx-ingress controller. 
 After this all workloads deployed to the cluster can target the nginx ingress type  ie ``` kubernetes.io/ingress.class: nginx``` as this will be the base controller used for ingress.
 
 
-TODO INSET IMAGE
 
 
-
-
-Steps:  
-* You will need to provide the cluster vpc to the [values-alb-ingress.yaml ](./extras/ingress/values-alb-ingress.yaml) 
+**_Steps:**_  
+* You will need to provide the cluster vpc to the [values-alb-ingress.yaml ](https://github.com/bbdsoftware/eks-bootstrap/extras/ingress/values-alb-ingress.yaml) 
     ```clusterName: ql-dev-stage
     awsRegion: eu-west-1
     awsVpcID: "TOBEREPLACED"
@@ -86,7 +82,7 @@ Steps:
     create: true
     serviceAccountName: alb-ingress
      ```
-* You will need to provide the R53 domain and zoneid to the [values-eternal-dns.yaml ](./extras/ingress/values-eternal-dns.yaml) 
+* You will need to provide the R53 domain and zoneid to the [values-eternal-dns.yaml ](https://github.com/bbdsoftware/eks-bootstrap/extras/ingress/values-eternal-dns.yaml) 
     ```
     ....
         domainFilters: [TOBEREPLACED]
@@ -94,7 +90,7 @@ Steps:
 
      ```
      ```
-* You will need to provide your cert arn  [alb-nginx-controller ](./extras/ingress/alb-nginx-controller) 
+* You will need to provide your cert arn  [alb-nginx-controller ](https://github.com/bbdsoftware/eks-bootstrap/extras/ingress/alb-nginx-controller) 
     ```
     ....
             name: ql-alb-nginx
@@ -106,7 +102,7 @@ Steps:
                 alb.ingress.kubernetes.io/certificate-arn: [YOURCERTARN]
     ....            
      ```     
-* Run script   [setupingress.sh](./extras/ingress/setupingress.sh)  
+* Run script   [setupingress.sh](https://github.com/bbdsoftware/eks-bootstrap/extras/ingress/setupingress.sh)  
   ```
   sh  extras/setupingress.sh 
   ```
@@ -117,7 +113,7 @@ Steps:
 The ci folder has the set up to deploy the jenkins-operator into the cluster.        
 This is used to leverage jenkins as a CI tool to enable ci within the the kubernetes cluster
 
-* Run script   [setupingress.sh](./extras/ci/setupci.sh)  
+* Run script   [setupingress.sh](https://github.com/bbdsoftware/eks-bootstrap/extras/ci/setupci.sh)  
   ```
   sh  /extras/ci/setupci.sh 
   ```
@@ -135,7 +131,7 @@ Argo cd is used as a gitops tool to facilitate CD using gitops principals
 
 steps:
 
-* Supply your domain in the argo ingress manifest   [./extras/cd/ingress.yaml](./extras/cd/ingress.yaml)  
+* Supply your domain in the argo ingress manifest   [./extras/cd/argo/ingress.yaml](https://github.com/bbdsoftware/eks-bootstrap/tree/master/extras/cd/argo/ingress.yaml)  
   ```
     ....
     spec:
@@ -156,9 +152,9 @@ steps:
                 servicePort: https
 
   ```
-* Run script   [setupingress.sh](./extras/cd/setupcd.sh)  
+* Run script   [setupcd.sh](https://github.com/bbdsoftware/eks-bootstrap/tree/master/extras/cd/argo/setupcd.sh)  
   ```
-  sh  /extras/cd/setupcd.sh 
+  sh  /extras/cd/argo/setupcd.sh 
   ```
 Please see [demo](https://github.com/bbdsoftware/eks-pring-boot-jenkinsop-example) for an example spring boot application building   using the jenkins via the jenkins operator
 
