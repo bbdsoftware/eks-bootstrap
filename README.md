@@ -12,6 +12,9 @@ see the bellow repos for nest steps:
 * [Part 2 setting up CI](https://github.com/bbdsoftware/eks-jenkins-ci)
 * [Part 3 setting up CD ](https://github.com/bbdsoftware/eks-argo-cd)
 
+**Service example:**
+An example spring boot service can be found here.  [demo](https://github.com/bbdsoftware/eks-pring-boot-jenkinsop-example) 
+This is referenced in all parts as a demo service
 
 **In use:**
 * [helm](https://helm.sh/)
