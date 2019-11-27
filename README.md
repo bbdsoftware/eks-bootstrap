@@ -160,7 +160,7 @@ steps:
   ```
   sh  /extras/cd/setupcd.sh 
   ```
-Please see https://github.com/kanzifucius/spring-boot-k8s-jenkinsop-example for an example spring boot applciation building   using the jenkins via the jenkins operator
+Please see [demo](https://github.com/bbdsoftware/eks-pring-boot-jenkinsop-example) for an example spring boot application building   using the jenkins via the jenkins operator
 
 
 References :
