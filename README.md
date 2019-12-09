@@ -162,6 +162,52 @@ Please see [demo](https://github.com/bbdsoftware/eks-pring-boot-jenkinsop-exampl
 References :
 * https://argoproj.github.io/argo-cd/
 
+
+
+
+### CLUSTER LOGGING
+---
+
+The logging folder has the set up to deploy fluentd-cloudwatch  into the cluster.        
+You will need to create a log group or supply an exiting log group in Cloudwatch and update the values-logging.yaml accordingly
+
+NOTE  nthe worker nodes role will need a policy to be able to write and access cloud watch eg
+
+
+k8s-logs-policy
+```
+    {
+    "Version": "2012-10-17",
+        "Statement": [
+                {
+                "Sid": "logs",
+                "Effect": "Allow",
+                "Action": [
+                "logs:CreateLogStream",
+                "logs:PutLogEvents",
+                "logs:DescribeLogGroups",
+                "logs:DescribeLogStreams"
+                ],
+                "Resource": [
+                "arn:aws:logs:*:*:*"
+                ]
+            }
+        ]
+    }
+```
+
+NOTE 
+
+```
+...
+awsRegion: eu-west-1
+awsRole:
+awsAccessKeyId:
+awsSecretAccessKey:
+logGroupName:  /aws/eks/YOURCLUSTER/containers
+....
+```
+
 # TODO
 * Make this repo in an app of apps pattern to be deployed with argo cd  ref https://argoproj.github.io/argo-cd/operator-manual/cluster-bootstrapping/
 * Include the prometheus operator
